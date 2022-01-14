@@ -7,7 +7,7 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: #333
   }
   
   a {
@@ -53,8 +53,8 @@
   }
   
   textarea {
-    min-width: 40%;
-    min-height: 100px;
+    min-width: 80vh;
+    min-height: 30vh;
   }
   
   form > div {
@@ -88,9 +88,17 @@
   
   main {
     flex: 1;
-    padding: 2% 4%;
+    padding: 5% 8%;
+  }
+
+  ol {
+    list-style: none;
   }
   
+  .limited-content {
+    max-width: 100vh;
+  }
+
   .btn-no-style {
     background: none;
     border: none;
