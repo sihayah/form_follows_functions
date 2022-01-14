@@ -48,15 +48,21 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// POST /api/users
+// POST: create a user
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
     })
-    .then(userData => {
-          res.json(userData);
+    .then(dbUserData => {
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+        
+            res.json(dbUserData);
+          });
       })
     .catch(err => {
         console.log(err);
@@ -64,7 +70,7 @@ router.post('/', (req, res) => {
     });    
 });
 
-// PUT /api/users/1
+// PUT: update a user by id
 router.put('/:id', (req, res) => {
     User.update(req.body, {
         individualHooks: true,
@@ -85,7 +91,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// DELETE /api/users/1
+// DELETE a user by id
 router.delete('/:id', (req, res) => {
     User.destroy({
         where: {
@@ -104,5 +110,45 @@ router.delete('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+// login
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    }).then(dbUserData => {
+        if(!dbUserData) {
+            res.status(400).json({ message: 'No user with that email address'});
+            return;
+        }
+        const validPassword = dbUserData.checkPassword(req.body.password);
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+        }
+
+        req.session.save(() => {
+            // declare session variables
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+      
+            res.json({ user: dbUserData, message: 'You are now logged in!' });
+          });
+    })
+})
+
+// logout
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        })
+    }
+    else {
+        res.status(404).end();
+    }
+})
 
 module.exports = router;
