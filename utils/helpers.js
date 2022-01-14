@@ -16,5 +16,12 @@ module.exports = {
             .replace("www.", "")
             .split('/')[0]
             .split('?')[0];
+    },
+    display_limited_text: content => {
+        if(content.length > 100){
+            return content.slice(0,100) + "..."    
+        } else {
+            return content
+        }
     }
 }
