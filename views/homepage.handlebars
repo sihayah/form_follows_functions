@@ -1,3 +1,7 @@
-<p>
-    HOMEPAGE CONTENT... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam soluta nulla laborum beatae impedit. Ducimus reiciendis assumenda vitae? Non vero odit vel eligendi distinctio praesentium nostrum perferendis facere ipsa earum.
-</p>
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+      Post: {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
