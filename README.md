@@ -27,7 +27,7 @@
 
   description
   <br>
-  Deployment: (https://forum-follows-functions.herokuapp.com/)
+  Heroku: (https://forum-follows-functions.herokuapp.com/)
   <br>
   Repo: (https://github.com/sihayah/forum_follows_functions)
 
