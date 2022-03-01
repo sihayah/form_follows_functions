@@ -27,7 +27,7 @@
 
   This is a tech blog forum where users can, create an account to make posts. Also, user may view and upvote the posts of other users.
   <br>
-  Deployment: (https://forum-follows-functions.herokuapp.com/)
+  Heroku: (https://forum-follows-functions.herokuapp.com/)
   <br>
   Repo: (https://github.com/sihayah/forum_follows_functions)
 
