@@ -25,7 +25,7 @@
 
   ---
 
-  description
+  This is a tech blog forum where users can, create an account to make posts. Also, user may view and upvote the posts of other users.
   <br>
   Deployment: (https://forum-follows-functions.herokuapp.com/)
   <br>
@@ -46,7 +46,7 @@
 
   ---
 
-  For any further inquiries, please contact me via gitHub: [(sihayah)](https://github.com/sihayah) or email: sihaya_a@hotmail.com
+  For any further inquiries, please contact me via gitHub: [(sihayah)](https://github.com/sihayah) or email: sihayaharris@gmail.com
 
   <br>
   <br>
