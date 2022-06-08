@@ -95,7 +95,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2%;
+    padding: 1%;
   }
   
   header h1 {
@@ -113,6 +113,10 @@
   }
   header h1:hover {
     opacity: 80%;
+  }
+
+  nav {
+    padding-left: 5vh;
   }
   
   
