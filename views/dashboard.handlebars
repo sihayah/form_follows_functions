@@ -1,5 +1,22 @@
 
-<a href="/create-post">Create</a>
+
+{{#if loggedIn}}
+<section>
+  <h2>Create New Post:</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <textarea name="post-content"></textarea>
+    </div>
+    <button type="submit" class="create-btn ">Create</button>
+  </form>
+</section>
+{{/if}}
+
 
 {{#if posts.length}}
 <section>
@@ -14,3 +31,5 @@
   </ol>
 </section>
 {{/if}}
+
+<script src="/javascript/add-post.js"></script>

@@ -73,7 +73,7 @@ router.get('/:id', (req, res) => {
       });
   });
 
-router.post('/create-post', withAuth, (req, res) => {
+router.post('/', withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   if(req.session) {
     Post.create({
