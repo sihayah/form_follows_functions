@@ -73,18 +73,20 @@ router.get('/:id', (req, res) => {
       });
   });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/create-post', withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-  Post.create({
-    title: req.body.title,
-    content: req.body.content,
-    user_id: req.session.user_id
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  if(req.session) {
+    Post.create({
+      title: req.body.title,
+      content: req.body.content,
+      user_id: req.session.user_id
+    })
+      .then(dbPostData => res.json(dbPostData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });    
+  }
 });
 
 router.put('/:id', withAuth, (req, res) => {
