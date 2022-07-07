@@ -26,28 +26,31 @@
    <img src= './public/readmeimgs/landing.png'> 
   
   <br>
+  
+  Live: https://forum-follows-functions.herokuapp.com/
+  <br>
+  Repo: https://github.com/sihayah/forum_follows_functions
+
+<br>
 
   ## UserStory
 
   AS A developer who writes about tech
+  <br>
   I WANT a CMS-style blog site
+  <br>
   SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
   <br>
 
   ## Features
 
-  This is a CMS style tech blog forum where users can create an account to make posts, and interact with the posts of other users by leaving comments. 
+  This is a CMS-style tech blog/forum where users can create an account to make posts, and interact with the posts of other users by leaving comments. 
 
   MVC is implemented in this app for seperaton of concerns.
 
   <br>
-  <br>
-  Live: https://forum-follows-functions.herokuapp.com/
-  <br>
-  Repo: https://github.com/sihayah/forum_follows_functions
 
-<br>
 
 ## Technologies
 
@@ -148,7 +151,7 @@
 
   The result should appear in the command line as follows:
 
-  <img src='test-snippet.png'>
+  <img src='./public/readmeimgs/test-snippet.png'>
   
 
   <br>
