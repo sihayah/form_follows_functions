@@ -11,7 +11,9 @@
   
 
 
-  [Description](#description) *
+  [User Story](#userstory) *
+  [Features](#features) *
+  [Technologies](#technologies) *
   [Prerequisites](#prerequisites)*
   [Installation](#installation) *
   [Usage](#usage) *
@@ -21,21 +23,45 @@
 
   <br>
 
-   <img src= 'landing.png'> 
+   <img src= './public/readmeimgs/landing.png'> 
   
   <br>
 
-  ## Description
+  ## UserStory
 
-  This is a CMS style tech blog forum where users can create an account to make posts, and interact with the posts of other users. 
+  AS A developer who writes about tech
+  I WANT a CMS-style blog site
+  SO THAT I can publish articles, blog posts, and my thoughts and opinions
+
+  <br>
+
+  ## Features
+
+  This is a CMS style tech blog forum where users can create an account to make posts, and interact with the posts of other users by leaving comments. 
 
   MVC is implemented in this app for seperaton of concerns.
 
   <br>
   <br>
-  Deployment: https://forum-follows-functions.herokuapp.com/
+  Live: https://forum-follows-functions.herokuapp.com/
   <br>
   Repo: https://github.com/sihayah/forum_follows_functions
+
+<br>
+
+## Technologies
+
+  The following techonologies were used in the production of this application:
+
+  * HTML5
+  * CSS3
+  * JavaScript
+  * Node.js
+  * MySQL
+  * Sequelize
+  * Heroku
+  * APIs
+
 
 <br>
 
@@ -55,7 +81,9 @@
 
   ## Installation
 
-  Clone the repo locally. Open of the repo in VS Code. Run npm install to install all dependencies via the command line...
+  To demo this app from a browser navigate to https://forum-follows-functions.herokuapp.com/.
+
+  To demo locally, clone the repo. Navigate to the root of the repo in the command line. Run npm install to install all dependencies:
 
     npm install
   
@@ -63,11 +91,23 @@
 
     touch .env
   
-  Navigate to the .env file and add the following code, updated with your data...
+  Navigate to the .env file in VS Code and add the following code, updated with your data...
 
     DB_NAME='form_follows_functions_db'
     DB_USER=(your MySQL username)
     DB_PW=(your MySQL password)
+
+  Once this is updated you can start the app from command line: 
+
+    npm start
+
+  If it's running the following response should occur in your command line...
+
+   <img src= './public/readmeimgs/code-snippet.png'> 
+
+  If you then navigate to http://localhost:3001, you should see the following:
+
+  <img width=50% height=auto src= './public/readmeimgs/landing-no-data.png'> 
 
 
   <br>
@@ -76,22 +116,26 @@
 
 ## Usage
 
-  To demo this app navigate to https://forum-follows-functions.herokuapp.com/.
+  Begin by signing-up to create a user.
 
-  To view locally, run npm start in the command line. 
+  <img src='./public/readmeimgs/ui1.png' width=50%>
 
-    npm start
+  Upon sign-up, you'll be redirected to your dashboard automaticfally. From the dashboard, you can create a blog post. 
 
-  If it's running the following response should occur in your command line...
+  <img src='./public/readmeimgs/ui2.png' width=50%>
+  
+  When you submit, the blog posts will populate below the post form in your dashboard along with the option to make edits to a post below each.
 
-   <img src= 'code-snippet.png'> 
+  <img src='./public/readmeimgs/ui3.png' width=50%>
+  
+  Then, if you navigate to the home page, you will see all of the posts that have been created.
 
-  If you then navigate to http://localhost:3001, you should see the following:
+  <img src='./public/readmeimgs/ui4.png' width=50%>
+  
+  You can select a post by clicking it's title, then leave comments. 
 
-  <img width=50% height=auto src= 'landing-no-data.png'> 
+  <img src='./public/readmeimgs/ui5.png' width=50%>
 
-
-  Sign-up and create a blog post. When you submit, the blog posts will populate below the post form in your dashboard. Then, if you navigate to the home page, you will see all of the posts that have been created and you can select a post to comment or upvote. 
 
   
   <br>
