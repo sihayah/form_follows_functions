@@ -33,9 +33,9 @@
 
   <br>
   <br>
-  Deployment: (https://forum-follows-functions.herokuapp.com/)
+  Deployment: https://forum-follows-functions.herokuapp.com/
   <br>
-  Repo: (https://github.com/sihayah/forum_follows_functions)
+  Repo: https://github.com/sihayah/forum_follows_functions
 
 <br>
 
@@ -49,7 +49,7 @@
   <br>
   Visual Studio Code - [Download & Install VS Code](https://code.visualstudio.com/download)
   <br>
-  MongoDB - [Download & Install MongoDB](https://www.mongodb.com/docs/manual/installation/)
+  MySQL - [Download & Install MySQL](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
 
   <br>
 
@@ -66,8 +66,8 @@
   Navigate to the .env file and add the following code, updated with your data...
 
     DB_NAME='form_follows_functions_db'
-    DB_USER=(your MongoDB username)
-    DB_PW=(your MongoDB password)
+    DB_USER=(your MySQL username)
+    DB_PW=(your MySQL password)
 
 
   <br>
@@ -91,7 +91,7 @@
   <img width=50% height=auto src= 'landing-no-data.png'> 
 
 
-  Sign-up and select create to make blog post. 
+  Sign-up and create a blog post. When you submit, the blog posts will populate below the post form in your dashboard. Then, if you navigate to the home page, you will see all of the posts that have been created and you can select a post to comment or upvote. 
 
   
   <br>
