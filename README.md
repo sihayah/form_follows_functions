@@ -27,7 +27,7 @@
   
   <br>
   
-  Live: https://forum-follows-functions.herokuapp.com/
+  Live: https://forumfollowsfunctions.herokuapp.com/
   <br>
   Repo: https://github.com/sihayah/forum_follows_functions
 
